@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Card from './components/Card'
+import ToggleButton from "./components/ToggleButton"
+import './App.css'
+import useRainbowTheme from './hooks/useRainbowTheme'
 
 function App() {
+  const rainbowTheme = useRainbowTheme()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div className={rainbowTheme.rainbow} onMouseEnter={rainbowTheme.handleToggle}>
+        Rainbow border when you mouse enter here!
+      </div>
+      <Card>
+        <ToggleButton> Toggle button </ToggleButton>
+      </Card>
+    </>
+  )
 }
 
-export default App;
+export default App
