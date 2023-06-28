@@ -1,12 +1,12 @@
 import { useState } from "react"
 
 export default function useButtonTheme(initial: string, updated: string) {
-    const [contain, setContain] = useState(initial)
+    const [buttonStyle, setButtonStyle] = useState(initial)
     const handleToggle = () => {
-        setContain(updated)
+        setButtonStyle(updated)
     }
     const value = {
-        contain,
+        buttonStyle,
         handleToggle
     }
     return value

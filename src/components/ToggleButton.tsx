@@ -12,7 +12,7 @@ const ToggleButton = (props: ToggleButtonProps) => {
     return (
     <>
         {/* @ts-ignore */}
-        <Button variant={value.contain} onClick={value.handleToggle}>
+        <Button variant={value.buttonStyle} onClick={value.handleToggle}>
         {children}
         </Button>
     </>
